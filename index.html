@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <style type="text/css">
+ 
+   /* Mise en forme de base */
+   body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+.active {
+    text-decoration: underline red;
+    text-underline-offset:5px ;
+    text-decoration-thickness: 5px ;
+    font-weight: bold;
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    text-decoration: underline red;
+    text-underline-offset:5px ;
+    text-decoration-thickness: 5px
+}
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #1f1f1f;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-right: 20px;
+}
+.navbar .nav-links li:hover{
+    font-weight: bold;
+}
+
+.navbar .cta {
+    padding: 10px 20px;
+    background-color: #e63946;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.navbar .cta:hover{
+    font-weight: bold;
+    background-color: #f5939b;
+    cursor: pointer;
+}
+/* Section "A propos" */
+#about {
+    padding: 40px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2em;
+    margin: 20px;
+}
+
+#about p {
+    font-size: 1.2em;
+    color: #333;
+}
+#hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+}
+
+#hero .hero-content {
+    max-width: 80%;
+}
+.hero-content p span{
+    color: #e63946;
+}
+#hero h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+#hero .btn {
+    background-color: #e63946;
+    padding: 12px 24px;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+#hero .btn:hover{
+    font-weight: bold;
+    background-color: #f5939b;
+    cursor: pointer;
+}
+#hero .hero-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    
+}
+#hero .hero-image img:hover{
+    transform: translate(10px, 10px);
+}
+/* Section des projets */
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px;
+    background-color: #fafafa;
+}
+.project-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    overflow: hidden;
+    width: 300px; 
+    padding-top: 10px;
+}
+.project-card:hover{
+    transform: scale(1.05);
+}
+.project-img img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin: 10px;
+}
+
+.project-description {
+    padding: 15px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.project-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.project-card p {
+    font-size: 1em;
+    color: #555;
+    text-align: center;
+      margin-bottom: 30px;
+}
+.project-card p a{
+    text-decoration: none;
+    margin-bottom: 30px;
+    padding: 14px 30px;
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+.project-card p a:hover{
+    text-decoration: red;
+    background-color: #f5939b;
+    font-weight: bold;
+    color: white;
+}
+/* Animation de l'apparition des cartes de projets */
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Contact Section */
+.contact {
+    padding: 80px 20px;
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact form:hover{
+    transform: translate(10px, 10px);
+}
+.contact form input,
+.contact form textarea {
+    width: 60%;
+    padding: 12px;
+    margin-bottom: 20px;
+    background-color: rgb(187, 180, 180);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.contact form button {
+    padding: 14px 30px;
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.contact form button:hover{
+    font-weight: bold;
+    background-color: #f5939b;
+    cursor: pointer;
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    bottom: 0;
+}
+footer .icons ul{
+    display: flex;
+}
+footer .icons ul li{
+    list-style: none;
+    margin-right: 10px;
+}
+footer .icons ul li:hover{
+    transform: scale(1.05);
+}
+.rotating{
+    background-color: gray;
+    width: 100px;
+    height: 100px;
+    animation: rotating 10s linear infinite;
+    border-radius: 8px;
+  }
+
+     /* Pour les tablettes (2 colonnes) */
+     @media (max-width: 768px) {
+        .navbar{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                align-items: center;
+            }
+               body{
+               display: flex;
+               flex-wrap: wrap;
+            }
+            #hero{
+                flex-wrap: wrap;
+                flex-direction: row;
+             }
+                .hero-image{
+                    margin-top: 50px;
+             }
+        }
+        /* Pour les mobiles smartphone (1 colonne) */
+        @media (max-width: 600px) {
+                    .navbar{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+            body{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            #hero{
+                flex-wrap: wrap;
+                flex-direction: row;
+                align-items: center;
+                text-align: center;
+             }
+                form{
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 20px;
+             }
+                footer{
+                flex-wrap: wrap;
+                /* flex-direction: column; */
+             }
+             #about p{
+                flex-wrap: wrap;
+                flex-direction: row;
+                align-items: center;
+                text-align: center;
+             }
+        }
+        #about p {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+ </style>
+</head>
+<body>
+    <!-- Navbar Section -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Myfolio</div>
+            <ul class="nav-links">
+                <li class="active"><a href="#about">Accueil</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+            <a href="#contact" class="cta">Contact Me</a>
+        </nav>
+    </header>
+  
+<!-- Section "A propos" -->
+<section id="about">
+     <p>Bonjour, je suis Daouda Coulibaly — Développeur Web passionné. <br>
+        Je crée des sites web modernes, performants et responsives.<br>
+        Spécialiste en développement frontend avec html et css.<br>
+        Je conçois des expériences digitales fluides pour tous les écrans.<br>
+        Disponible pour vos projets freelance ou en collaboration.<br>
+        </p>
+        <h2>A propos</h2>
+         <p>Autodidacte, curieux et toujours prêt à apprendre de nouvelles technologies. <br>
+            Passionné par le web et la résolution de problèmes techniques. <br>
+            </p>
+</section>
+ <!-- Hero Section -->
+ <section id="hero">
+    <div class="hero-content">
+        <h1>Compétences</h1>
+        <p> Maîtrise des langages <span>HTML et CSS</span>. <br>
+             Création d’interfaces responsive avec Flexbox, CSS Grid et media queries.
+             Optimisation SEO, accessibilité et performance web.<br>
+            </p>
+    </div>
+    <div class="hero-image">
+        <img src="image.jpg" alt="photo profil">
+    </div>
+</section>
+    <!-- Section "Projets" -->
+    <section id="projects">
+        <h2>Mes projets</h2>
+        <div class="project-card">
+            <div class="project-img">
+                <img src="./image/Projet file Rouge.png" alt="Projet 1">
+            </div> 
+            <div class="project-description">
+                <h3>Projet 1</h3>
+                <p>Ce projet en file rouge est une site web innovante et interactive</p>
+            </div>
+            <p><a href="./projet fil rouge/index fil rouge.html">Aller sur le projet fil rouge</a></p> 
+        </div>
+        <!-- Ajoutez d'autres projets de manière similaire -->
+        <div class="project-card">
+            <div class="project-img">
+                <img src="./image/Projet Interface.png" alt="Projet 2">
+            </div>
+            <div class="project-description">
+                <h3>Projet 2</h3>
+                <p>Ce projet est une interface d'une page d'un site web innovante et interactive</p>
+            </div>
+            <p><a href="./projet interface/Projet interface.html">Aller sur le projet interface</a></p> 
+        </div>
+        <div class="project-card">
+            <div class="project-img">
+                <img src="./image/Projet Final.png" alt="Projet2">
+            </div>
+            <div class="project-description">
+                <h3>Projet 3</h3>
+                <p>Ce projet est un site web de vente de produits écologiques en lige</p>
+            </div>
+            <p><a href="./projet final/index.html">Aller sur le projet EcoShop</a></p>
+        </div>
+    </section>
+     <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Nom complet" required>
+            <input type="email" placeholder="Address Email " required>
+            <textarea placeholder="Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+</section>
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Mon Portfolio - Tous droits réservés</p>
+        <div class="icons">
+            <ul>
+                <li><a href="https://fr-fr.facebook.com/"><i class="fa-brands fa-facebook" style="color: white;"></i></a></li>
+                <li><a href="https://x.com/Log%20in/"><i class="fab fa-twitter" style="color: white;"></i></a></li>
+                <li><a href="https://fr.linkedin.com/"><i class="fa-brands fa-linkedin" style="color:white;"></i></i</a></li>
+                <li><a href="https://www.instagram.com/accounts/login/"><i class="fab fa-instagram-square share" style="color:white;"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

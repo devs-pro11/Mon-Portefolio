@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface complete html & css</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style type="text/css">
+    *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 17% 83% ;
+        height: 100vh;
+        overflow: hidden;
+    }
+    /* la partie aside qui se trouve à gauche qui comporte le logo la liste
+     et les info de l'utilisateur */
+    .gauche{
+     display: grid;
+     grid-template-rows: 10% 75% 15%;
+    }
+    .logo{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.logo img{
+    width: 60px;
+    height: 60px;
+}
+aside ul li{
+    list-style-type: none;
+    height: 40px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    color: black;
+}
+aside ul li a{
+text-decoration: none;
+font-size: 17px;
+color: black;
+}
+aside ul li.active{
+ background-color: orange;
+}
+aside ul li.active a{
+ color: white;
+  }
+  aside ul li:hover{
+ background-color: orange;
+}
+aside ul li:hover a{
+ color: white;
+  }
+  .info-user{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.info-user-container{
+    background-color: orange;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    height: 90%;
+    width: 95%;
+    border-radius: 8px;
+    padding: 0 10px;
+}
+.info-user-gauche{
+ display: flex;
+ gap: 8px;
+ align-items: center;
+}
+.info-user-image{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-image: url("https://th.bing.com/th?id=OIF.mae1%2foAUuxPgeyKzRijwVQ&rs=1&pid=ImgDetMain");
+    background-position: center;
+    background-size: cover;
+}
+.info-user-name p{
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+}
+.info-user-name span{
+    font-size: 15px;
+    color: white;
+    font-weight: 100;
+}
+.info-user-droite{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+}
+/* la ârtie droite qui comporte le header et le main */
+.droite{
+    background-color: #dad0d041;
+    display: grid;
+    grid-template-rows: 10% 90%;
+}
+header{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+}
+header img{
+    width: 40px;
+    height: 40px;
+}
+header i{
+ font-size: 30px;
+}
+main{
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 25% 70%;
+    gap: 5%;
+    background-color: gray;
+}
+.main-haut{
+ display: grid;
+ grid-template-columns: 70% 25%;
+ gap: 5%;
+ padding: 10px;
+}
+.cartes{
+    display: grid;
+    grid-template-columns: 22% 22% 22% 22%;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px;
+}
+.carte-bleu{
+    color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(141, 141, 214, 0.623);
+}
+.carte-orange{
+    color: rgb(253, 167, 8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(243, 190, 90, 0.753);
+}
+.carte-container p{
+    text-align: center;
+}
+.circulaire{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cercle-gris{
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.blanc{
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    background-color: white;
+}
+.pourcentage p{
+  font-size: 20px;
+  display: flex;
+  justify-content:center ;
+  align-items: center;
+  margin: 25px;
+}
+.main-bas{
+display: grid;
+grid-template-columns: 70% 25%;
+padding: 10px;
+gap: 5%;
+
+}
+.gauche-table{
+    background-color: white;
+    color: #2c3e50;
+    height: 370px;
+}
+.gauche-table th{
+    color: black;
+}
+.gauche-table th{
+    border-bottom: 1px solid black;
+}
+.main-bas h2{
+    margin: 15px 0px 30px 10px;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+/* conteneur des cartes */
+.droite-cartes{
+    background-color: white;
+    height: 370px;
+}
+.mes-cartes{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 80px;
+    gap: 10px;
+    padding: 10px;
+    height: 400px;
+}
+.carte-1{
+    background-color: rgba(141, 141, 214, 0.623);
+    color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+.carte-2{
+    background-color: rgb(243, 196, 110);
+    color: rgb(218, 145, 9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carte-3{
+   background-color: rgb(89, 224, 173);
+   color: rgb(26, 173, 26);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+.carte-4{
+    background-color: rgb(243, 130, 130);
+    color:  rgb(212, 49, 49);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+.droite-cartes p{
+    text-align: center;
+    margin: 5px;
+    font-size: 15px;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="gauche">
+            <div class="logo">
+                <img src="https://th.bing.com/th/id/R.1316eb22278c93934ab838d7f8afdfe3?rik=Cm7f0h%2fXteskmg&pid=ImgRaw&r=0" alt="logo">
+            </div>
+            <aside>
+                <ul>
+                <li class="active"><a href="#">Tableau de bord</a></li>
+                <li><a href="#">Gestion des ventes </a></li>
+                <li><a href="#">Gestion des achats</a></li>
+                <li><a href="#">Gestion des produits</a></li>
+                <li><a href="#">Gestion des catégories</a></li>
+                <li><a href="#">Gestion des clients</a></li>
+                <li><a href="#">Gestion des employés</a></li>
+            </ul>
+            </aside>
+            <div class="info-user">
+                <div class="info-user-container">
+                 <div class="info-user-gauche">
+                    <div class="info-user-image"></div>
+                    <div class="info-user-name">
+                        <p>Daouda</p>
+                        <span>Admin</span>
+                    </div>
+                 </div>
+                 <div class="info-user-droite">
+                    <i class='bx bx-log-out-circle'></i>
+                 </div>
+            </div>
+        </div>
+        </div>
+        <div class="droite">
+            <header>
+                <i class='bx bx-menu'></i>
+                <img src="./image.jpg" alt="">
+            </header>
+            <main>
+                <div class="main-haut"> 
+                    <div class="cartes">
+                    <div class="carte-bleu">
+                        <div class="carte-container">
+                        <p><i class='bx bx-user' ></i></p>
+                        <p>Employés</p>
+                         <p><span>250</span></p>
+                        </div>
+                    </div>
+                    <div class="carte-orange">
+                        <div class="carte-container">
+                            <p><i class='bx bx-user' ></i></p>
+                            <p>Clients</p>
+                             <p><span>250</span></p>
+                            </div>
+                    </div>
+                    <div class="carte-bleu">
+                        <div class="carte-container">
+                            <p><i class='bx bx-user' ></i></p>
+                            <p>Employés</p>
+                             <p><span>250</span></p>
+                            </div>
+                    </div>
+                    <div class="carte-orange">
+                        <div class="carte-container">
+                            <p><i class='bx bx-user' ></i></p>
+                            <p>Clients</p>
+                             <p><span>250</span></p>
+                            </div>
+                    </div>
+                  </div>
+                  <div class="circulaire">
+                    <div class="carte-droite">
+                        <div class="cercle-gris">
+                            <div class="blanc">
+                            <div class="pourcentage">
+                                <p>100%</p>
+                            </div>
+                            </div>
+                        </div>
+                       </div>
+                  </div>
+                </div>
+                <div class="main-bas">
+                    <div class="gauche-table">
+                        <section>
+                            <h2>Les dernières ventes</h2>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Nom du client</th>
+                                        <th>Date</th>
+                                        <th>Quantité</th>
+                                        <th>Montant</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Moussa Ndiaye</td>
+                                        <td>10/12/2023</td>
+                                        <td>12</td>
+                                        <td>1.250.000f CFA</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Moussa Ndiaye</td>
+                                        <td>10/12/2023</td>
+                                        <td>12</td>
+                                        <td>1.250.000f CFA</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Moussa Ndiaye</td>
+                                        <td>10/12/2023</td>
+                                        <td>12</td>
+                                        <td>1.250.000f CFA</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Moussa Ndiaye</td>
+                                        <td>10/12/2023</td>
+                                        <td>12</td>
+                                        <td>1.250.000f CFA</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+            
+                    </div>
+                    <div class="droite-cartes">
+                        <p>Les statistiques</p>
+                        <div class="mes-cartes">
+                            <div class="carte-1">
+                                <div class="carte-container">
+                                    <p><i class='bx bx-user' ></i></p>
+                                    <p>Employés</p>
+                                     <p><span>250</span></p>
+                                    </div>
+                            </div>
+                            <div class="carte-2">
+                                <div class="carte-container">
+                                    <p><i class='bx bx-user' ></i></p>
+                                    <p>Employés</p>
+                                     <p><span>250</span></p>
+                                    </div>
+                            </div>
+                            <div class="carte-3">
+                                <div class="carte-container">
+                                    <p><i class="fa-solid fa-wave-square"></i></p>
+                                    <p>Nombre de ventes</p>
+                                     <p><span>250</span></p>
+                                    </div>
+                            </div>
+                            <div class="carte-4">
+                                <div class="carte-container">
+                                    <p><i class="fa-solid fa-wave-square"></i></p>
+                                    <p>Nombre de ventes</p>
+                                     <p><span>250</span></p>
+                                    </div>
+                            </div>
+                            <div class="carte-3">
+                                <div class="carte-container">
+                                    <p><i class="fa-solid fa-sack-dollar"></i></p>
+                                    <p>Montante des ventes</p>
+                                     <p><span>359.050.000</span></p>
+                                    </div>
+                            </div>
+                            <div class="carte-4">
+                                <div class="carte-container">
+                                    <p><i class="fa-solid fa-sack-dollar"></i></p>
+                                    <p>Montante des ventes</p>
+                                     <p><span>205.500.000</span></p>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
